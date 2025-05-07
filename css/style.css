@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #007bff;
+    font-weight: bold;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-banner {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.hero-banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-banner p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.shop-now-button {
+    background-color: #ffce00;
+    color: black;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.shop-now-button:hover {
+    background-color: #ffc107;
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+.product {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-in both;
+    margin-bottom: 10px;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Form Elements */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form button, button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+form button:hover, button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top-color: #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Card Layout */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f0f2f5;
+}
+
+.form-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.brand {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.form-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-card label {
+    font-weight: 500;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-card button:hover {
+    background-color: #218838;
+}
+
+.form-note {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-error {
+    background-color: #ffe0e0;
+    color: #c00;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Checkout Specific */
+.checkout-summary {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+}
+
+.checkout-button {
+    background-color: #007bff;
+    color: white;
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+.go-back {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.go-back:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-banner h1 {
+        font-size: 32px;
+    }
+
+    .hero-banner p {
+        font-size: 18px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
